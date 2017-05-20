@@ -112,7 +112,8 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
         rvImageList.addItemDecoration(new DividerGridItemDecoration(rvImageList.getContext()));
         if (config.needCamera)
             imageList.add(new Image());
-
+        if(config.bottomBgColor != 0)
+            rlBottom.setBackgroundColor(config.bottomBgColor);
         imageListAdapter = new ImageListAdapter(getActivity(), imageList, config);
         imageListAdapter.setShowCamera(config.needCamera);
         imageListAdapter.setMutiSelect(config.multiSelect);

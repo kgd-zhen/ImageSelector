@@ -93,6 +93,8 @@ public class ImgSelConfig {
     public int outputX = 500;
     public int outputY = 500;
 
+    public int bottomBgColor;
+
     public ImgSelConfig(Builder builder) {
         this.needCrop = builder.needCrop;
         this.multiSelect = builder.multiSelect;
@@ -114,6 +116,7 @@ public class ImgSelConfig {
         this.aspectY = builder.aspectY;
         this.outputX = builder.outputX;
         this.outputY = builder.outputY;
+        this.bottomBgColor = builder.bottomBgColor;
     }
 
     public static class Builder implements Serializable {
@@ -139,6 +142,8 @@ public class ImgSelConfig {
         private int aspectY = 1;
         private int outputX = 400;
         private int outputY = 400;
+
+        private int bottomBgColor;
 
         public Builder(Context context, ImageLoader loader) {
             this.loader = loader;
@@ -241,6 +246,11 @@ public class ImgSelConfig {
             this.aspectY = aspectY;
             this.outputX = outputX;
             this.outputY = outputY;
+            return this;
+        }
+
+        public Builder bottomBgColor(int bottomBgColor) {
+            this.bottomBgColor = bottomBgColor;
             return this;
         }
 

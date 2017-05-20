@@ -71,12 +71,13 @@ public class MainActivity extends AppCompatActivity {
                 // 确定按钮文字颜色
                 .btnTextColor(Color.WHITE)
                 // 使用沉浸式状态栏
-                .statusBarColor(Color.parseColor("#3F51B5"))
+                .statusBarColor(Color.parseColor("#262930"))
                 // 返回图标ResId
                 .backResId(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_mtrl_am_alpha)
                 .title("Images")
                 .titleColor(Color.WHITE)
-                .titleBgColor(Color.parseColor("#3F51B5"))
+                .titleBgColor(Color.parseColor("#262930"))
+                .bottomBgColor(Color.parseColor("#262930"))
                 .allImagesText("All Images")
                 .needCrop(true)
                 .cropSize(1, 1, 200, 200)
